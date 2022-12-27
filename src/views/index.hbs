@@ -1,2 +1,13 @@
-<h1>HEY!!!</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quidem expedita sequi temporibus modi quaerat doloribus! Mollitia sequi sit reprehenderit odio necessitatibus inventore qui sunt? Numquam error laborum delectus provident?</p>
+<div class="row">
+    <div class="offset-md-4 col-md-4">
+        <form action="/send-sms" method="POST" class="card card-body">
+            <div class="form-group">
+                <input name="message" type="text" class="form-control" placeholder="Write your message" autofocus>
+            </div>
+            <div class="form-group">
+                <input name="phone" value="+34642316105" type="tel" class="form-control" placeholder="+34 642 642 642" autocomplete="off">
+            </div>
+            <button class="btn btn-primary">Send</button>
+        </form>
+    </div>
+</div>
