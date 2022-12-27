@@ -1,6 +1,6 @@
 const config = require('../config')
 
-const client = require('twilio')('AC9c5185fd3e1f6606f06e6b665095073a', 'c15a357da59d71cf8ec20d5ba01d1fe6')
+const client = require('twilio')(config.twilio.accountSid, config.twilio.authToken)
 
 /**
  * Send a message via sms
@@ -21,4 +21,4 @@ async function sendMessage(phone, body){
     }
 }
 
-module.exports = {sendMessage}
+module.exports = { sendMessage }
