@@ -2,7 +2,7 @@ const config = require('../config')
 const { sendMessage } = require('../twilio/send-sms')
 const SMS = require('../models/sms')
 
-const indexController = async (res, req) => {
+const indexController = async (req, res) => {
     const messages = await SMS.find().lean()
     messages.forEach(m => console.log(m.body))
     res.render('index', { messages })
